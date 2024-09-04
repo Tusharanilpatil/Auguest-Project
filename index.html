@@ -6,14 +6,83 @@
     <title>August Project
     </title>
     <link rel="stylesheet" href="style.css">
+
+    <p id="output Addition"></p>
+    <p id="output multiplication"></p>
+    <p id="output division"></p>
+    <p id="'output exponent"></p>
+    <p id="output concatenation"></p>
+
     <script>
-        alert('Hello Everyone')
+        // alert('Hello Everyone')
+
+//addition of two number in paragraph
+      let num1 =10;
+      let  num2 = 5;
+            num3 = num1 +num2;
+        console.log(num3);
+        document.getElementById("output Addition").innerHTML = "Addition of two number is = "+num3;
+ 
+        // multiplication of two number in paragraph
+        
+        num3=num1*num2;
+        console.log(num3);
+        document.getElementById("output multiplication").innerHTML = "Multiplication of two number is = "+num3;
+
+    {
+        let num1 =10;
+        let num2 = 5;
+        num3 =num1+num2;                   
+        console.log("Addition of two number is ",num3);
+    }
+    
+
+// division of two number in paragraph
+ num3 = num1 / num2;
+console.log(num3);
+document.getElementById("output division").innerHTML = "Division of two number is = " +num3;
+
+//Using exponation
+ num3 = num1 ** num2;
+console.log(num3);
+//document.getElementById("output exponent").innerHTML = "exponent of two number is = "+num3;
+
+   
+// Using concatenation
+
+     Firstname ="Tushar";
+      Lastname = " Patil";
+    Fullname = Firstname + Lastname;
+    console.log(Fullname);
+    document.getElementById("output concatenation").innerHTML = "concatenation of two number is = "+Fullname;
+    console.log(typeof(Fullname));
+
+
+// Var variables
+var x = 10;
+ {
+  var x = 20;
+  console.log(x); // outputs 20
+}
+console.log(x); // outputs 20
+
+
+
+// Let variables
+let y = 10;
+{
+  let y = 20; 
+  console.log(y); // outputs 20
+}
+console.log(y); // outputs 10
+
     </script>
 </head>
 <body>
-    <h1> August</h1>
-    <p>This is my first project</p>
+    <!--<h1> August</h1> 
+
+    <p> This is my first project</p> 
     <button onclick="alert('Hello Everyone')">Click Me</button>
-    <script src="./script.js"></script>
+    <script src="./script.js"></script> --> 
 </body>
 </html>
