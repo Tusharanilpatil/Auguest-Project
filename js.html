@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>August Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p id="outputAddition"></p>
+    <p id="outputMultiplication"></p>
+    <p id="outputDivision"></p>
+    <p id="outputExponent"></p>
+    <p id="outputConcatenation"></p>
+
+    <script>
+        // Addition of two numbers
+        let num1 = 10;
+        let num2 = 5;
+        let sum = num1 + num2;
+        
+        document.getElementById("outputAddition").innerHTML = "Addition of two numbers: " + sum;
+        console.log(sum); 
+
+
+        // Multiplication of two numbers
+        let multi = num1 * num2;
+        document.getElementById("outputMultiplication").innerHTML = "Multiplication of two numbers: " + multi;
+        console.log(multi); 
+
+
+        // Division of two numbers
+        let div = num1 / num2;
+        document.getElementById("outputDivision").innerHTML = "Division of two numbers: " + div;
+        console.log(div); 
+
+        // Exponentiation
+        let exponent = num1 ** num2;
+        document.getElementById("outputExponent").innerHTML = "Exponent of two numbers: " + exponent;
+        console.log(exponent);
+
+        // Concatenation
+        let firstName = "Tushar";
+        let lastName = "Patil";
+        let fullName = firstName + lastName;
+        document.getElementById("outputConcatenation").innerHTML = "Concatenation of two strings: " + fullName;
+        console.log(fullName); 
+
+    </script>
+</body>
+</html>
