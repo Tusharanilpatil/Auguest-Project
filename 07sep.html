@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Classes</h1>
+
+    
+    <div id="output firstname"></div>
+    <div id="output lastname"></div>
+    <div id="output gender"></div>
+    <div id="output email"></div>
+    <div id="output mobile"></div>
+    <div id="output education"></div>
+    <div id="output dob"></div>
+    <div id="output address"></div>
+    <div id="output city"></div>
+    <div id="output state"></div>
+    <div id="output country"></div>
+    <div id="output pincode"></div>
+    <div id="output person"></div>
+    <div id="output person1"></div>
+    <div id="output person2"></div>
+    <div id="output person3"></div>
+    <div id="output person4"></div>
+
+    <h2>Maps and Its Methods</h2>
+
+<div id="outputdiv"></div>
+
+
+
+   
+</body>
+    
+
+<script>
+// Maps and Its Methods
+let m1 = new Map();
+m1.set("firstname","Ashif");
+m1.set("lastname","Nadaf");
+m1.set("gender","male");
+
+console.log(m1);
+document.getElementById("outputdiv").innerHTML ="FirstName="+m1.get("firstname");
+
+console.log(m1.get("gender"));
+// retrive m.get
+
+//classes
+class Person {
+    constructor(firstname, lastname, gender, email, mobile, education, dob, address, city, state, country, pincode) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.gender = gender;
+        this.email = email;
+        this.mobile = mobile;
+        this.education = education;
+        this.dob = new Date(dob); // Ensure the format is compatible, e.g., "YYYY-MM-DD"
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.country = country;
+        this.pincode = pincode;
+    }
+}
+
+let p1 = new Person("Tushar", "Patil", "male", "tushar@123", "1234567890", "ComputerScience", "1999-10-10", "Hinjawadi", "Pune", "Maharashtra", "India", "416103");
+
+let p2 = new Person("Omkar", "Kale", "male", "omkar@123", "9534585222", "ComputerScience", "1999-10-24", "Nigadi", "Pune", "Maharashtra", "India", "416111");
+
+let p3 = new Person("Ashif", "Nadaf", "male", "ashif@123", "9534852554", "ComputerScience", "1999-09-20", "Nigadi", "Pune", "Maharashtra", "India", "416111");
+
+let p4 = new Person("Rahul", "Patil", "male", "rahul@123", "9534585222", "Commerce", "1999-10-24", "Nigadi", "Pune", "Maharashtra", "India", "416111");
+
+let p5 = new Person("Priyanka", "Jadhav", "Female", "shubham@123", "9534585222", "MSc", "1999-10-24", "Nigadi", "Pune", "Maharashtra", "India", "416111");
+
+console.log(p4.firstname);
+
+document.getElementById("output firstname").innerHTML ="Firstname="+p4.firstname;
+document.getElementById("output person").innerHTML ="Gendar="+p4.gender;
+document.getElementById("output person1").innerHTML ="Education="+p3.education;
+document.getElementById("output person2").innerHTML ="City="+p4.city;
+document.getElementById("output person3").innerHTML ="Mobile="+p4.mobile;
+document.getElementById("output person4").innerHTML ="Email="+p4.email;
+document.getElementById("output lastname").innerHTML ="Lastname="+p4.lastname;  
+document.getElementById("output address").innerHTML ="Address="+p3.address; 
+document.getElementById("output country").innerHTML ="Country="+p4.country; 
+document.getElementById("output state").innerHTML ="State="+p4.state; 
+document.getElementById("output pincode").innerHTML ="Pincode="+p4.pincode; 
+document.getElementById("output dob").innerHTML ="Dob="+p4.dob;
+
+</script>
+</html>
