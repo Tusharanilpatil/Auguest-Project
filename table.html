@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student list</title>
+</head>
+<body>
+
+    <h1>student list</h1>
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Education</th>
+                    <th>Date of Birth</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function getStudents(){
+            fetch("http://localhost:3000/students",{
+                method: "GET",
+                "Content-Type":"application/json",
+                "Accept-Type": "application/json"
+            }).then(response=>{
+                response.json().then(studentList=>{
+                    console.log(studentList);
+                    for(let singleStudent of studentList){
+                        let singleTr = document.createElement("tr");
+
+                        let td1 = document.createElement("td");
+                        td1.innerHTML = singleStudent.id;
+
+                        let td2 = document.createElement("td");
+                        td2.innerHTML = singleStudent.firstName;
+
+                        let td3 = document.createElement("td");
+                        td3.innerHTML = singleStudent.lastName;
+
+                        let td4 = document.createElement("td");
+                        td4.innerHTML = singleStudent.gender;
+
+                        let  td6 = document.createElement("td");
+                        td6.innerHTML = singleStudent.email;
+
+                        let td7 = document.createElement("td");
+                        td7.innerHTML = singleStudent.mobile;
+
+                        let td8 = document.createElement("td");
+                        td8.innerHTML = singleStudent.education;
+
+                        let td9 = document.createElement("td");
+                        td9.innerHTML = singleStudent.dob;
+
+                        let td10 = document.createElement("td");
+                        td10.innerHTML = singleStudent.address;
+
+                        let td11 = document.createElement("td");
+                        td11.innerHTML = singleStudent.city;
+
+                        let td12 = document.createElement("td");
+                        td12.innerHTML = `<a href="forms.html?studentId=${singleStudent.id}">Edit</a><button type="button" onclick="deleteStudent(${singleStudent.id})">Delete</button>`;
+
+                        singleTr.appendChild(td1);
+                        singleTr.appendChild(td2)
+                        singleTr.appendChild(td3)
+                        singleTr.appendChild(td4)
+                        singleTr.appendChild(td5)
+                        singleTr.appendChild(td6);
+                        singleTr.appendChild(td7);
+                        singleTr.appendChild(td8);
+                        singleTr.appendChild(td9);
+                        singleTr.appendChild(td10);
+                        singleTr.appendChild(td11);
+                        singleTr.appendChild(td12);
+
+
+
+                        document.getElementById("table-body").appendChild(singleTr)
+                    }
+                })
+            })
+        }
+        getStudents();
+
+        function deleteStudent(id){
+            let result = prompt("Are you really want to delete student with id" + id);
+            if(result == "yes"){
+            fetch("http://localhost:3000/students/" +id,{
+                method: "DELETE",
+                "Accept-Type": "application/json"
+            }).then(response=>{
+                response.json().then(data=>{
+                    alert("Student Deleted");
+                })
+            })
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="btn" onclick="clearDisplay()">C</button>
+            <button class="btn" onclick="appendToDisplay('/')">/</button>
+            <button class="btn" onclick="appendToDisplay('*')">*</button>
+            <button class="btn" onclick="appendToDisplay('-')">-</button>
+            <button class="btn" onclick="appendToDisplay('+')">+</button>
+            <button class="btn" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+    <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .calculator {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 220px;
+        overflow: hidden;
+    }
+
+    .display {
+        background-color: #333;
+        color: #fff;
+        font-size: 2em;
+        text-align: right;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .btn {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 20px;
+        font-size: 1.5em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #f1f1f1;
+    }
+
+    .btn:active {
+        background-color: #ddd;
+    }       
+</style>
+<script>
+function clearDisplay() {
+    document.getElementById('display').textContent = '0';
+}
+
+function appendToDisplay(value) {
+    const display = document.getElementById('display');
+    if (display.textContent === '0') {
+        display.textContent = value;
+    } else {
+        display.textContent += value;
+    }
+}
+
+function calculateResult() {
+    const display = document.getElementById('display');
+    try {
+        display.textContent = eval(display.textContent) || '0';
+    } catch {
+        display.textContent = 'Error';
+    }
+}
+</script>
+</body>
+</html>

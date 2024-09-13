@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+</body>
+<script>
+//spread operator
+
+let a=["Chaitnya","Vijay","Ravi","Vishvjeet"];
+let b=[...a,"Rahul","Vishal","Rohit","Abhishek"];
+
+let number =[0,1,2,3,4,5,6,7,8,9];
+let newNumber = [...number,10,11,12,13,14,15,16,17,18,19,20]; 
+
+console.log(newNumber);
+console.log(b); 
+
+// promise and async await
+
+let promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(10);
+    }, 2000);
+});
+
+promise.then((data) => {
+    console.log(data);  
+})
+
+//async await
+let async = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(10);
+    }, 2000);
+});
+async.then((data) => {
+    console.log(data);  
+})
+
+//even and prime
+
+function displayresult(isprime,iseven) {
+    if (is even) {
+        console.log("Number is even");
+    }else
+    {
+        console.log("Number is prime");
+    }
+
+</script>
+</html>
