@@ -39,8 +39,10 @@
                 "Content-Type":"application/json",
                 "Accept-Type": "application/json"
             }).then(response=>{
+    
+                
                 response.json().then(studentList=>{
-                    console.log(studentList);
+                    console.log("std",studentList);
                     for(let singleStudent of studentList){
                         let singleTr = document.createElement("tr");
 
@@ -48,31 +50,35 @@
                         td1.innerHTML = singleStudent.id;
 
                         let td2 = document.createElement("td");
-                        td2.innerHTML = singleStudent.firstName;
+                        td2.innerHTML = singleStudent.Firstname;
 
                         let td3 = document.createElement("td");
-                        td3.innerHTML = singleStudent.lastName;
+                        td3.innerHTML = singleStudent.Lastname;
 
                         let td4 = document.createElement("td");
-                        td4.innerHTML = singleStudent.gender;
+                        td4.innerHTML = singleStudent.Gender;
+
+                        let td5 = document.createElement("td");
+                        td5.innerHTML = singleStudent.Email;
+
 
                         let  td6 = document.createElement("td");
-                        td6.innerHTML = singleStudent.email;
+                        td6.innerHTML = singleStudent.Mobile;
 
                         let td7 = document.createElement("td");
-                        td7.innerHTML = singleStudent.mobile;
+                        td7.innerHTML = singleStudent.Education;
 
                         let td8 = document.createElement("td");
-                        td8.innerHTML = singleStudent.education;
+                        td8.innerHTML = singleStudent.DOB;
 
                         let td9 = document.createElement("td");
-                        td9.innerHTML = singleStudent.dob;
+                        td9.innerHTML = singleStudent.Address;
 
                         let td10 = document.createElement("td");
-                        td10.innerHTML = singleStudent.address;
+                        td10.innerHTML = singleStudent.City;
 
                         let td11 = document.createElement("td");
-                        td11.innerHTML = singleStudent.city;
+                        td11.innerHTML = singleStudent.State;
 
                         let td12 = document.createElement("td");
                         td12.innerHTML = `<a href="forms.html?studentId=${singleStudent.id}">Edit</a><button type="button" onclick="deleteStudent(${singleStudent.id})">Delete</button>`;
