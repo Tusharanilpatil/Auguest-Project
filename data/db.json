@@ -1,68 +1,43 @@
 {
   "students": [
     {
-      "id": "14c8",
+      "id": "9e2c",
       "Firstname": "Tushar",
       "Lastname": "Patil",
       "Gender": "MALE",
       "Email": "tushar@gmail.com",
-      "Mobile": "8551531115",
+      "Mobile": "7507579669",
       "Education": "Bsc",
-      "DOB": "2024-09-11",
+      "DOB": "2024-09-15",
       "Address": "Kolhapur",
-      "City": "Pune",
-      "State": "Maharastra"
+      "City": "Kolhapur",
+      "State": "maharashtra"
     },
     {
-      "id": "899a",
-      "Firstname": "Sandeep",
-      "Lastname": "Gaikwad",
-      "Gender": "MALE",
-      "Email": "sandeep@gmail.com",
-      "Mobile": "864894320",
-      "Education": "B.Tech",
-      "DOB": "1998-01-01",
-      "Address": "Dharashiv",
-      "City": "Pune",
-      "State": "Maharastra"
-    },
-    {
-      "id": "348e",
+      "id": "77fb",
       "Firstname": "Chaitanaya",
       "Lastname": "Bhalerao",
-      "Gender": "FEMALE",
-      "Email": "Chaitnya",
-      "Mobile": "865934309",
-      "Education": "M.Tech",
-      "DOB": "2024-09-22",
+      "Gender": "MALE",
+      "Email": "chaitnya@gmail.com",
+      "Mobile": "9420431531",
+      "Education": "B.Tech",
+      "DOB": "2004-11-03",
       "Address": "Pune",
       "City": "Pune",
-      "State": "Maharastra"
+      "State": "Maharashtra"
     },
     {
-      "id": "77ea",
-      "Firstname": "",
-      "Lastname": "",
-      "Email": "",
-      "Mobile": "",
-      "Education": "",
-      "DOB": "",
-      "Address": "",
-      "City": "",
-      "State": ""
-    },
-    {
-      "id": "4473",
-      "Firstname": "Vijay",
-      "Lastname": "Patil",
+      "id": "cae9",
+      "Firstname": "Vishvjeet ",
+      "Lastname": "Dhanvade",
       "Gender": "MALE",
-      "Email": "vijaypatil@gmail.com",
-      "Mobile": "876543234",
-      "Education": "Msc",
-      "DOB": "2024-09-11",
-      "Address": "Radhanagari",
-      "City": "Kolhapur",
-      "State": "Maharastra"
+      "Email": "vishvjeet@gmail.com",
+      "Mobile": "8545782498",
+      "Education": "MCA",
+      "DOB": "1999-12-25",
+      "Address": "Kalewadi",
+      "City": "Pune",
+      "State": "Maharashtra"
     }
   ]
 }
